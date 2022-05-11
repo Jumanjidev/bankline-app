@@ -1,21 +1,25 @@
 <div class="container">
-  <div class="jumbotron">
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <div class="jumbotron">
     <h1 class="display-6">Movimentações</h1>
     <p class="lead-1">Listagem das movimentações por correntista</p>
-    <hr class="my-2">
+    <hr class="my-4">
     <div class="input-group">
       <select  id="iCorrentista" [(ngModel)]="correntista" class="form-select">
         <option *ngFor="let c of correntistas" [ngValue]="c" >{{c.cpf}} - {{c.nome}}</option>
       </select>
-    <button class="btn btn-outline-secondary me-md-2 btn-sm" type="button" (click)="listMovimentacoes()">Buscar</button>
-    <a class="btn btn-outline-primary btn-sm" routerLink="/movimentacoes-new">Nova Movimentação</a>
-    <a class="btn btn-outline-primary btn-sm" routerLink="/correntistas">Correntistas</a>
+    <button class="btn btn-outline-secondary me-md-4 btn-sm" type="button" (click)="listMovimentacoes()">Buscar</button>
+    <a class="btn btn-outline-primary me-md-2 btn-sm" routerLink="/movimentacoes-new">Nova Movimentação</a>
+    <a class="btn btn-outline-primary me-md-2 btn-sm" routerLink="/correntistas">Correntistas</a>
   </div>
+  <p></p>
 <table class="table table-striped">
     <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Data Hora</th>
+      <th scope="col">Data & Hora</th>
       <th scope="col">Descrição</th>
       <th scope="col">Valor</th>
       <th scope="col">Tipo</th>
@@ -32,4 +36,8 @@
     </tbody>
   </table>
   </div>
-</div>
+
+  <div id="footer" class="footer">
+    <span>Feito por <a href="https://github.com/Jumanjidev/?msclkid=9cabb24ad0cf11ecbca30f2ea7d5ebe6">JumanjiDev</a></span>
+  </div>
+  
